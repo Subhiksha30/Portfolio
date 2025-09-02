@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+<!-- Typed.js -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subhiksha Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background-image: url('tech6.jpg'); /* Replace with actual path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+
+    .home-text h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      color: black;
+    }
+
+    .home-text h2 {
+      font-weight: 500;
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: lightslategray;
+    }
+
+    .home-text p {
+      
+      font-style:italic;
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      font-size: 18px;
+      color: gray ;
+      max-width: 600px;
+      line-height: 1.6;
+    }
+
+    .home-text img {
+      margin-top: 20px;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid white;
+    }
+
+    .home-image {
+      margin-top: 30px;
+    }
+    /* About Section */
+.about-section {
+  background: #0f0c29;  /* dark gradient look */
+  color: white;
+  padding: 60px 20px;
+  font-family: 'Courier New', monospace;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.about-left {
+  font-family:'Poppins', sans-serif;
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: black;
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+}
+
+.about-left h2 {
+  font-size: 2.2rem;
+  color: black;
+  margin-bottom: 10px;
+}
+
+
+.about-left h3 {
+  font-style: italic ;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color:  lightslategray;
+}
+
+.about-left p {
+  font-weight: 300;
+  font-style: italic;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+.about-left p {
+
+      font-style: italic;
+      font-weight: 200;
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      font-size: 18px;
+      color: gray ;
+      max-width: 600px;
+      line-height: 1.6;
+}
+
+
+.about-right {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+}
+
+
+.info-card {
+  background-color: #1a1a40;
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 0 transparent;
+}
+.info-card:hover {
+  background-color: #2c2c6c;
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.info-card .icon {
+  font-size: 1.8rem;
+}
+
+.info-card .content h4 {
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+  color: white;
+}
+
+.info-card .content p,
+.info-card .content li {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-bottom: 5px;
+}
+
+
+.info-card ul {
+  padding-left: 20px;
+}
+
+#projects {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #87ceeb, #008080); /* SkyBlue to Teal gradient */
+  color: #fff;
+  text-align: left;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+#projects h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: black;
+}
+
+#projects ul {
+  list-style: none;
+  padding: 0;
+  max-width: 800px;
+  margin: auto;
+}
+
+#projects li {
+  color: black;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 22px;
+  margin-top: 30px;
+}
+
+#projects p {
+  font-family: 'Poppins', sans-serif;
+  text-align: justify;
+  font-style: italic ;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color:  lightslategray;
+}
+
+
+
+/* Reusing Button Style */
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  margin: 10px 10px 0 0;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 24px;
+      background-color: rgb(44, 57, 57);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: lightslategray;
+    }
+    body {
+      font-family:'Times New Roman', Times, serif;
+      font-size: large;
+      background-color: #f7f7f7;
+      color: whitesmoke;
+    }
+    about{
+      text-align: justify;
+    }
+
+    nav {
+      background-color: #111;
+      color: white;
+      padding: 1rem;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: space-around;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+    }
+    section {
+      padding-top: 100px;
+      padding: 100px 20px;
+      min-height: 100vh;
+    }
+    #contact {
+  padding: 40px;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+#contact h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+#contact p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.contact-box {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.contact-box p {
+  margin: 15px 0;
+  font-size: 1.1rem;
+}
+
+.contact-box a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-box:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.02);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+#skills {
+  background-image: url('tech6.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+#skills h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  color: black;
+  margin-bottom: 40px;
+  display: inline-block;
+  padding-bottom: 10px;
+  text-align: center; /* ✅ Add this line */
+  width: 100%;        /* ✅ Optional, ensures full width for center */
+}
+
+
+/* Each skill card */
+.skill-card {
+  background: #1a1a2e;
+  border: 1px solid #2e2e4d;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 700px;
+  text-align: left;
+  box-shadow: 0 0 10px rgba(102, 204, 255, 0.2);
+}
+
+/* Header inside each card */
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #66ccff;
+}
+
+/* Paragraph under each skill */
+.skill-card p {
+  font-size: 20px;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+/* Progress bar container */
+.progress-bar {
+  background: #333;
+  border-radius: 10px;
+  height: 10px;
+  overflow: hidden;
+}
+
+/* Actual progress line */
+.progress {
+  height: 100%;
+  background: linear-gradient(to right, #6a5acd, #00bcd4);
+  border-radius: 10px;
+}
+#about {
+  background-image: url('tech7.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh; /* full screen height */
+}
+
+
+    #projects {
+      background-image: url('tech7.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100vh;
+      
+    }
+    #contact {
+     background-image: url('tech6.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100vh;
+      
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    .active {
+      border-bottom: 2px solid #fff;
+    }
+
+
+  #about, #projects, #contact, #skills {
+  min-height: 100vh;   /* content at least full screen */
+  height: auto;        /* grow if more content */
+  padding-top: 80px;   /* navbar space (since nav is fixed) */
+}
+
+
+
+
+  @media (max-width: 800px) {
+    .home-container {
+      padding: 20px 10px;
+      background-size: cover;
+      font-size: 16px;
+    }
+
+    .skill-card {
+      margin: 10px;
+      padding: 15px;
+      max-width: 90%;
+    }
+
+    .skill-header {
+      font-size: 16px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .skill-card p {
+      font-size: 14px;
+    }
+  }
+
+    
+
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#home" class="nav-link">Home</a>
+    <a href="#about" class="nav-link">About</a>
+    <a href="#skills" class="nav-link">Skills</a>
+    <a href="#projects" class="nav-link">Projects</a>
+    <a href="#contact" class="nav-link">Contact</a>
+  </nav>
+
+<section id="home">
+  <div class="home-container">
+    
+    <div class="home-text">
+      <h1>Hi, I'm Subhiksha R</h1>
+      <h2>Java Developer</h2>
+      <br>
+      <br>
+      <p> A passionate Frontend Developer dedicated to building responsive and user-friendly websites using HTML, CSS, and JavaScript. I love bringing designs to life and crafting smooth web experiences.</p>
+      <br>
+      
+      <img src="profile photo.jpg" alt="Subhiksha's Profile">
+
+      <br>
+      <br>
+
+    </div>
+
+    <div class="home-image">
+      <a href="Resume[2].pdf" target="_blank" class="btn">Download Resume</a>
+      <a href="https://www.Linkedin.com/in/subhiksha-rajkumar" target="_blank"class="btn">Linkedin</a>
+    </div>
+
+  </div>
+
+
+
+
+
+<section id="about" class="about-section" data-aos="fade-up">
+    <div class="about-container">
+      
+      <!-- Left side: About text -->
+      <div class="about-left">
+        <h2>About Me</h2>
+        <h3>Passionate About Frontend Development</h3>
+        <p>I'm Subhiksha R, a frontend developer with a strong interest in creating responsive and user-friendly web interfaces using HTML, CSS, and JavaScript. I love solving problems and turning creative ideas into digital experiences.</p>
+        <p>Currently pursuing my engineering degree while expanding my skills in web development. I’m focused on improving through real-world projects and continuous learning.</p>
+      </div>
+
+      <!-- Right side: Info Cards -->
+      <div class="about-right">
+
+        <div class="info-card">
+          <div class="icon"></div>
+          <div class="content">
+            <h4>Education</h4>
+            <p>B.Tech Student at Sri Manakula Vinayagar Engineering College, Puducherry</p>
+            <p>CGPA : 9</p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="icon"></div>
+          <div class="content">
+            <h4>Certifications</h4>
+            <ul>
+              <li>Introduction to Java</li>
+              <li>SQL Certificate</li>
+              <li>Programming in C</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="icon"></div>
+          <div class="content">
+            <h4>Focus</h4>
+            <p>Frontend Development, Responsive Websites, Problem Solving</p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="icon"></div>
+          <div class="content">
+            <h4>Career Goal</h4>
+            <p>To become a full-stack developer and work on impactful digital products.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+<section id="skills" data-aos="fade-up">
+  <h1>Skills</h1>
+
+  <div class="skill-card">
+    <div class="skill-header">
+      <span>🛡️ <strong>JAVA</strong></span>
+      <span class="percentage">90%</span>
+    </div>
+    <p>Proficient in Java for building robust, object-oriented applications.</p>
+    <div class="progress-bar">
+      <div class="progress" style="width: 90%;"></div>
+    </div>
+  </div>
+
+  <div class="skill-card">
+    <div class="skill-header">
+      <span>🧠 <strong>C Programming</strong></span>
+      <span class="percentage">85%</span>
+    </div>
+    <p>Skilled in C programming for system-level and memory-efficient applications.</p>
+    <div class="progress-bar">
+      <div class="progress" style="width: 85%;"></div>
+    </div>
+  </div>
+
+  <div class="skill-card">
+    <div class="skill-header">
+      <span>👨‍💻 <strong>Web Technologies</strong></span>
+      <span class="percentage">80%</span>
+    </div>
+    <p>Experienced in building responsive web interfaces using HTML, CSS, and JavaScript.</p>
+    <div class="progress-bar">
+      <div class="progress" style="width: 80%;"></div>
+    </div>
+  </div>
+
+  <div class="skill-card">
+    <div class="skill-header">
+      <span>⚙️ <strong>SQL</strong></span>
+      <span class="percentage">75%</span>
+    </div>
+    <p>Good knowledge of SQL for managing and querying relational databases.</p>
+    <div class="progress-bar">
+      <div class="progress" style="width: 75%;"></div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" data-aos="fade-up">
+    <h1>Projects</h1>
+    <ul>
+      <li>Quiz Website</li>
+      <br>
+      <p>An interactive and responsive Quiz Website built using HTML, CSS, and JavaScript, designed to test users’ knowledge across various topics. 
+        The project includes dynamic question loading, score calculation, and a sleek user-friendly interface.
+      </p>
+      <li>Student Management System - Cosole Based</li>
+      <br>
+      <p>Developed a Java - based student management system using arrays and Scanner to perform add,
+        view, search, and delete operations through a menu-driven interface with control flow and 
+        input validation.
+      </p>
+      <li>Traffic Light Control Systen</li>
+      <br>
+      <p>Developed a smart traffic light system using Arduuino, ultrasonic sensor, LEDs, and buzzer
+        to control signals based on vehicle distance. Implemented sensor - based timing logic to reduce 
+        wait time and improve traffic flow.
+      </p>
+    </ul>
+  </section>
+
+
+
+<section id="contact" data-aos="fade-up">
+  <h1>Get in Touch</h1>
+  <p>If you'd like to connect with me, feel free to reach out through the details below. I'm open to opportunities, collaborations, or just a friendly chat.</p>
+
+  <div class="contact-box">
+    <h2 style="color: black;">Contact Information</h2>
+    <p><strong>Email:</strong> <a href="mailto:subhirajkumar30@gmail.com">subhirajkumar30@gmail.com</a></p>
+    <p><strong>Phone:</strong> +91 7904283267</p>
+    <p><strong>Location:</strong> Tamil Nadu, India</p>
+  </div>
+</section>
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
